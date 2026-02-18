@@ -5,6 +5,9 @@
   <groupId>com.microsoft.example</groupId>
   <artifactId>myshuttle</artifactId>
   <version>0.0.1</version>
+  <sonar.host.url>http://20.109.40.150:9000/</sonar.host.url>
+  <sonar.login>admin</sonar.login>
+  <sonar.password>sqa_1ad753394646eaae152dd6dbd6e357596d19965b</sonar.password> 
   <packaging>war</packaging>
   <build>
   	<finalName>myshuttledev</finalName>
@@ -88,6 +91,21 @@
       </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+	
+	    <repository>
+	      <id>nexus</id>
+	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <url>http://20.109.40.150:8081/repository/mavensnap/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>Mithun Technologies Snapshot Nexus Repository </name>
+	      <url>http://20.109.40.150:8081/repository/mavenrelease/</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
   <dependencies>
     <dependency>
       <groupId>javax.servlet</groupId>
